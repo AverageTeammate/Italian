@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Waxhaw Italian Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Modern, friendly fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top stripe in Italian colors -->
+  <div class="tricolore"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <span class="brand-flag" aria-hidden="true"></span>
+        Waxhaw Italian Club
+      </a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#cannoli">Cannoli</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero with real Waxhaw image -->
+  <section class="hero">
+    <picture>
+      <!-- Wikimedia Commons: Waxhaw footbridge (public domain) -->
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/3/38/Waxhaw%2C_NC%2C_Bridge.jpg"
+        alt="Historic footbridge over the railroad in downtown Waxhaw, NC"
+        class="hero-img"
+        loading="eager"
+      />
+    </picture>
+    <div class="hero-overlay">
+      <h1 class="display">
+        Benvenuti a Waxhaw!
+      </h1>
+      <p class="lead">
+        Celebrating Italian culture & community—right here in beautiful Waxhaw, North Carolina.
+      </p>
+      <a class="btn btn-primary" href="#join">Become a Member</a>
+    </div>
+  </section>
+
+  <main>
+    <section id="about" class="section container grid grid-2">
+      <div>
+        <h2 class="section-title">About the Club</h2>
+        <p>
+          The Waxhaw Italian Club brings neighbors together to share language,
+          food, music, and traditions—from espresso tastings to film nights
+          and regional cooking workshops. Whether your roots are in Sicily,
+          Calabria, Piemonte, or you're simply <em>Italiano nel cuore</em>,
+          you’re welcome here.
+        </p>
+        <ul class="feature-list">
+          <li>Monthly cultural meetups and guest speakers</li>
+          <li>Italian conversation tables (all levels welcome)</li>
+          <li>Community service & local partnerships in Waxhaw</li>
+        </ul>
+        <a class="btn" href="#events">See Upcoming Events</a>
+      </div>
+
+      <!-- Real Waxhaw image (CC0) -->
+      <figure class="card media">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/54/Waxhaw%2C_North_Carolina_01.jpg"
+          alt="View of South Main Street in downtown Waxhaw"
+          loading="lazy"
+        />
+        <figcaption>Downtown Waxhaw — South Main Street</figcaption>
+      </figure>
+    </section>
+
+    <section id="events" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Upcoming Events</h2>
+        <div class="grid grid-3">
+          <!-- Event cards with placeholders you can swap later -->
+          <article class="card">
+            <img src="https://placehold.co/600x400?text=Cooking+Class" alt="Placeholder for a cooking class photo" />
+            <div class="card-body">
+              <h3>Pasta & Sauces Night</h3>
+              <p>Hands-on class featuring fresh tagliatelle and classic sughi.</p>
+              <p class="meta">Thursday · 6:30 PM · Community Kitchen</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://placehold.co/600x400?text=Film+Night" alt="Placeholder for film night" />
+            <div class="card-body">
+              <h3>Italian Cinema Under the Stars</h3>
+              <p>Bring a blanket; we’ll bring the subtitles and snacks.</p>
+              <p class="meta">Saturday · 8:00 PM · Park Lawn</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://placehold.co/600x400?text=Language+Table" alt="Placeholder for language table" />
+            <div class="card-body">
+              <h3>Conversazione al Caffè</h3>
+              <p>Casual Italian conversation groups—beginners welcome.</p>
+              <p class="meta">Sundays · 10:00 AM · Local Café</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section container">
+      <h2 class="section-title">Waxhaw × Italia — Gallery</h2>
+      <p class="subtle">Swap the placeholders below with your own event photos.</p>
+
+      <div class="masonry">
+        <!-- Real Waxhaw image (CC0) -->
+        <a class="masonry-item" href="https://upload.wikimedia.org/wikipedia/commons/e/ea/Waxhaw%2C_North_Carolina_03.jpg" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Waxhaw%2C_North_Carolina_03.jpg" alt="Brick storefronts in Waxhaw" loading="lazy" />
+        </a>
+
+        <!-- Placeholders to replace later -->
+        <img class="masonry-item" src="https://placehold.co/800x600?text=Your+Photo+Here" alt="Placeholder image" loading="lazy" />
+        <img class="masonry-item" src="https://placehold.co/600x800?text=Your+Photo+Here" alt="Placeholder image" loading="lazy" />
+        <img class="masonry-item" src="https://placehold.co/700x500?text=Your+Photo+Here" alt="Placeholder image" loading="lazy" />
+        <img class="masonry-item" src="https://placehold.co/500x700?text=Your+Photo+Here" alt="Placeholder image" loading="lazy" />
+      </div>
+    </section>
+
+    <section id="cannoli" class="section section-alt">
+      <div class="container grid grid-2">
+        <div>
+          <h2 class="section-title">Our Cannoli Corner</h2>
+          <p>
+            We’re serious about cannoli—crisp shells piped to order with
+            fluffy ricotta, a touch of orange zest, and pistachio crumble.
+            Look for our <strong>“Cannoli of the Month”</strong> at gatherings.
+          </p>
+          <ul class="feature-list">
+            <li>Classic Sicilian (ricotta & chocolate chip)</li>
+            <li>Pistachio & candied orange</li>
+            <li>Seasonal chef’s special</li>
+          </ul>
+          <a class="btn" href="#join">Get Involved</a>
+        </div>
+
+        <figure class="card media">
+          <!-- Placeholder: swap with your own cannoli photo -->
+          <img src="https://placehold.co/800x600?text=Fresh+Cannoli" alt="Placeholder for a plate of cannoli" loading="lazy" />
+          <figcaption>Freshly filled—just before serving.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Waxhaw Italian Club</strong><br />
+        Waxhaw, North Carolina
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#join">Join</a>
+      </div>
+      <div class="credits">
+        <span>Photos: Wikimedia Commons (public domain / CC0).</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
