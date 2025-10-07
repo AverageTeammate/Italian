@@ -3,7 +3,7 @@
   --green:#1e7f3f;
   --white:#ffffff;
   --red:#d8342a;
-  --ink:#0f172a;         /* deep slate */
+  --ink:#0f172a;
   --ink-2:#334155;
   --muted:#f5f6f8;
   --card:#ffffff;
@@ -15,7 +15,7 @@
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{
-  font-family: "Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif;
+  font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif;
   color:var(--ink);
   background:#fff;
   line-height:1.55;
@@ -30,6 +30,16 @@ body{
   margin:0 0 12px;
 }
 .subtle{color:var(--ink-2);margin:0 0 28px}
+
+/* Italian accents */
+.deco-underline{
+  position:relative; padding-bottom:10px;
+}
+.deco-underline::after{
+  content:""; position:absolute; left:0; bottom:0; height:6px; width:110px;
+  background:linear-gradient(90deg,var(--green) 0 33.33%, var(--white) 33.33% 66.66%, var(--red) 66.66% 100%);
+  border-radius:999px;
+}
 
 .tricolore{
   height:6px;
@@ -55,21 +65,25 @@ body{
 }
 .nav a:hover{color:var(--ink)}
 
+/* HERO */
 .hero{
   position:relative; isolation:isolate; min-height:56vh;
   display:grid; place-items:center; overflow:hidden;
 }
-.hero-img{
-  width:100%; height:56vh; object-fit:cover; display:block; filter:saturate(1.05) contrast(1.05);
+.hero-media{
+  width:100%; height:56vh; object-fit:cover; display:block;
+  filter:saturate(1.05) contrast(1.05);
 }
 .hero::after{
-  content:""; position:absolute; inset:0; background:
-    radial-gradient(1200px 500px at 30% 20%, rgba(0,0,0,.40), transparent 60%),
+  content:""; position:absolute; inset:0; z-index:1;
+  background:
+    radial-gradient(1200px 500px at 30% 20%, rgba(0,0,0,.35), transparent 60%),
     linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.55));
-  z-index:1;
 }
 .hero-overlay{
   position:absolute; inset:0; z-index:2; display:grid; place-items:center; text-align:center; padding:0 18px; color:#fff;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="rgba(255,255,255,0.06)" d="M0 6h6v6H0zM6 0h6v6H6z"/></svg>');
+  background-repeat: repeat;
 }
 .display{
   font-family:"Playfair Display",serif;
@@ -85,34 +99,50 @@ body{
 }
 .btn:hover{transform:translateY(-1px)}
 .btn-primary{background:linear-gradient(135deg,var(--green),#18a15a); color:#fff; border:none}
+.btn-small{padding:8px 12px; font-weight:700; font-size:14px}
 
+/* GRID helpers */
 .grid{display:grid; gap:28px}
 .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width: 900px){
   .grid-2{grid-template-columns:1fr}
-  .grid-3{grid-template-columns:1fr}
 }
 
+/* Card grid that auto-fits cleanly */
+.grid-cards{
+  display:grid; gap:24px;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* Feature list */
 .feature-list{margin:14px 0 20px; padding-left:18px}
 .feature-list li{margin:6px 0}
 
+/* CARDS — consistent heights */
 .card{
   background:var(--card); border-radius:var(--radius);
   box-shadow:var(--shadow); border:1px solid rgba(0,0,0,.04);
-  overflow:hidden;
+  overflow:hidden; display:flex; flex-direction:column;
 }
+.card > img{
+  width:100%; aspect-ratio:16/9; object-fit:cover; display:block;
+}
+.card .card-body{
+  padding:16px; display:flex; flex-direction:column; gap:8px; flex:1;
+}
+.card h3{margin:0}
+.meta{color:var(--ink-2); font-size:14px; margin-top:auto}
+
+/* MEDIA cards */
 .card.media img{display:block; width:100%; height:auto}
 .card.media figcaption{padding:10px 14px; color:var(--ink-2); font-size:14px; background:#fafafa}
 
-.card .card-body{padding:16px}
-.card h3{margin:0 0 6px}
-.meta{color:var(--ink-2); font-size:14px}
-
+/* Masonry */
 .masonry{columns: 280px; column-gap:18px}
 .masonry-item{break-inside:avoid; display:block; width:100%; border-radius:12px; margin:0 0 18px; box-shadow:var(--shadow)}
 .masonry img{width:100%; display:block}
 
+/* Forms (kept from your base) */
 .form{padding:20px}
 .form-row{display:flex; flex-direction:column; gap:6px; margin-bottom:14px}
 .form-row input, .form-row select{
@@ -123,6 +153,7 @@ body{
 .form-actions{margin-top:10px}
 .form-note{color:var(--ink-2); font-size:14px; margin-top:10px}
 
+/* Footer */
 .site-footer{
   margin-top:48px; border-top:1px solid #e5e7eb; background:#fff; padding:26px 0;
 }

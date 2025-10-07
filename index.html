@@ -4,14 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Waxhaw Italian Club</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Modern, friendly fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Top stripe in Italian colors -->
+  <!-- Tricolor accent -->
   <div class="tricolore"></div>
 
   <header class="site-header">
@@ -24,87 +25,81 @@
         <a href="#about">About</a>
         <a href="#events">Events</a>
         <a href="#gallery">Gallery</a>
-        <a href="#cannoli">Cannoli</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero with real Waxhaw image -->
+  <!-- HERO -->
   <section class="hero">
-    <picture>
-      <!-- Italian short video -->
-      <img
-        src="images/movie1.mp4"
-        alt="Italian vibe"
-        class="hero-img"
-        loading="eager"
-      />
-    </picture>
+    <!-- Make sure this points to your actual file -->
+    <video class="hero-media" autoplay muted playsinline loop poster="images/hero-poster.jpg">
+      <source src="images/movie1.mp4" type="video/mp4" />
+      <!-- Optional: add a webm for broader support -->
+      <!-- <source src="images/hero.webm" type="video/webm" /> -->
+      Your browser does not support the video tag.
+    </video>
+
     <div class="hero-overlay">
-      <h1 class="display">
-        Benvenuti a Waxhaw!
-      </h1>
-      <p class="lead">
-        Celebrating Italian culture & community—right here in beautiful Waxhaw, North Carolina.
-      </p>
+      <h1 class="display">Welcome to Waxhaw!</h1>
+      <p class="lead">Celebrating Italian culture and community—right here in Waxhaw, North Carolina.</p>
       <a class="btn btn-primary" href="#join">Become a Member</a>
     </div>
   </section>
 
   <main>
+    <!-- ABOUT -->
     <section id="about" class="section container grid grid-2">
       <div>
-        <h2 class="section-title">About the Club</h2>
+        <h2 class="section-title deco-underline">About the Club</h2>
         <p>
-          The Waxhaw Italian Club brings neighbors together to share language,
-          food, music, and traditions—from espresso tastings to film nights
-          and regional cooking workshops. Whether your roots are in Sicily,
-          Calabria, Piemonte, or you're simply <em>Italiano nel cuore</em>,
-          you’re welcome here.
+          The Waxhaw Italian Club brings neighbors together to share language, food,
+          music, and traditions—from espresso tastings to film nights and regional
+          cooking workshops. Whether your roots are in Italy or you simply love the
+          culture, you’re welcome here.
         </p>
         <ul class="feature-list">
           <li>Monthly cultural meetups and guest speakers</li>
-          <li>Italian conversation tables (all levels welcome)</li>
-          <li>Community service & local partnerships in Waxhaw</li>
+          <li>Conversation tables (all levels welcome)</li>
+          <li>Community service and local partnerships in Waxhaw</li>
         </ul>
         <a class="btn" href="#events">See Upcoming Events</a>
       </div>
 
-      <!-- Real Waxhaw image (CC0) -->
       <figure class="card media">
-        <img
-          src="images/collage.jpg"
-          alt="View of various Italian foods"
-          loading="lazy"
-        />
-        <figcaption>Food!</figcaption>
+        <img src="images/collage.jpg" alt="Assorted Italian foods and community table" loading="lazy" />
+        <figcaption>The table is set—let’s dig in!</figcaption>
       </figure>
     </section>
 
+    <!-- EVENTS (Queens South only) -->
     <section id="events" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">Upcoming Events</h2>
-        <div class="grid grid-3">
-          <!-- Event cards with placeholders you can swap later -->
+        <h2 class="section-title deco-underline">Upcoming Events</h2>
+
+        <div class="grid grid-cards">
           <article class="card">
-            <img src="images/queenssouth.jpg" alt="Meeting" />
+            <img src="images/queenssouth.jpg" alt="Queens South in Waxhaw" />
             <div class="card-body">
-              <h3>Food Night</h3>
-              <p>Meeting at Queens South Waxhaw Oct 15th!</p>
-              <p class="meta">Wed · 6:30 PM · Queens South</p>
+              <h3>Aperitivo Social at Queens South</h3>
+              <p>Light bites, great company, and conversation.</p>
+              <p class="meta">Wednesday · 6:30 PM · Queens South</p>
+              <a class="btn btn-small" href="#rsvp">RSVP</a>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
     <section id="gallery" class="section container">
-      <h2 class="section-title">Waxhaw × Italia — Gallery</h2>
-      <p class="subtle">Swap the placeholders below with your own event photos.</p>
+      <h2 class="section-title deco-underline">Waxhaw × Italian Heritage — Gallery</h2>
+      <p class="subtle">Replace the placeholders below with your own event photos.</p>
 
       <div class="masonry">
-        <!-- Real Waxhaw image (CC0) -->
         <a class="masonry-item" href="https://upload.wikimedia.org/wikipedia/commons/e/ea/Waxhaw%2C_North_Carolina_03.jpg" target="_blank" rel="noopener">
           <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Waxhaw%2C_North_Carolina_03.jpg" alt="Brick storefronts in Waxhaw" loading="lazy" />
         </a>
 
-        <!-- Placeholders to replace later -->
         <img class="masonry-item" src="images/dad_italian.jpg" alt="Placeholder image" loading="lazy" />
         <img class="masonry-item" src="images/newarticle.png" alt="Placeholder image" loading="lazy" />
         <img class="masonry-item" src="images/wic.jpg" alt="Placeholder image" loading="lazy" />
@@ -118,6 +113,13 @@
       <div>
         <strong>Waxhaw Italian Club</strong><br />
         Waxhaw, North Carolina
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#gallery">Gallery</a>
+      </div>
+      <div class="credits">© 2025 Waxhaw Italian Club</div>
     </div>
   </footer>
 </body>
